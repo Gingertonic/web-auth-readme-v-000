@@ -1,1 +1,14 @@
+<h1>Your friends! </h1>
 
+<% if @friends.size > 0 %>
+  <% @friends.each do |friend| %>
+    <ul>
+      <div class="friend">
+        <p><%="#{friend["first_name"]} #{friend["last_name"]}"%><br>
+          <%="#{friend["homeCity"]}"%></p>
+      </div>
+    </ul>
+  <%end%>
+<% else %>
+ <p>You've not made any friends yet :( </p>
+<%end%>
